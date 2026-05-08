@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    image: exponentor/expon:latest
+    container_name: expon-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: always
+    # networks:
+    #   - expon-network
+
+# networks:
+#   expon-network:
+#     driver: bridge
